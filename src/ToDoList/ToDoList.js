@@ -1,15 +1,21 @@
-import Task from '../Task/Task'
+import ToDoListItem from '../ToDoListItem/ToDoListItem'
 
-function ToDoList( { toDos} ) {
-    const tasks = toDos.map(toDo => {
+function ToDoList({toDos, handleDelete}) {
+    const toDoList = toDos.map(toDo => {
         return (
-            <Task toDo = {toDo}/>
+            <ToDoListItem
+                key={toDo.id}
+                id={toDo.id}
+                toDo={toDo.task}
+                handleDelete={handleDelete}
+            />
         )
     })
     return (
-        <div>
-           {tasks} 
+        <div className="to-do-list-item">
+            {toDoList}
         </div>
     )
 }
+
 export default ToDoList

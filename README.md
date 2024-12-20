@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# React Component Prompt: Todo List Application
+Task:
+Build a Todo List component in React. The component should have the following functionality:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add Todo:
 
-## Available Scripts
+The user should be able to add a new todo by typing in a text input and clicking an "Add" button.
+Each todo should have a title (string) and an id (unique identifier).
+Display Todos:
 
-In the project directory, you can run:
+List all todos in a vertical list below the input field.
+Each todo should display its title.
+Mark as Completed:
 
-### `npm start`
+The user should be able to click on a todo to mark it as completed. When marked, the todo should visually change (e.g., strike-through or a different color).
+Delete Todo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each todo should have a delete button that removes the todo from the list.
+Persist Data:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Implement local state (using React's useState) to manage the todo list.
+Use useEffect to save the todo list to localStorage so that the data persists across page reloads.
+Bonus: Filter Todos (Optional):
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Implement buttons to filter the todos by status:
+Show all todos
+Show only completed todos
+Show only active todos
+Things to Consider:
+Ensure the component is reusable (e.g., avoid hardcoding data).
+Break down the component into smaller, reusable components if possible (e.g., TodoItem).
+Handle edge cases like adding empty todos, marking todos without titles, etc.
+Ensure accessibility (e.g., using semantic HTML, adding aria-labels where necessary).
+Make the UI user-friendly, even for small tasks (consider loading states, empty lists, etc.).
+Bonus Challenge:
