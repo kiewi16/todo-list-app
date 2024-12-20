@@ -1,16 +1,24 @@
 import { useState } from 'react'
+import ToDoList from '../ToDoList/ToDoList'
 
-function AddToDo( { addToDoItem } ) {
+function AddToDo() {
+    const [toDos, setToDos] = useState([])
     const [newToDo, setNewToDo] = useState("")
 
     function handleSubmit(event) {
         event.preventDefault()
         const toDoItem = {
             id: Date.now(),
-            newToDo: newToDo, 
+            task: newToDo,
         }
-        addToDoItem(toDoItem)
+        setToDos(prevToDos => [...prevToDos, toDoItem])
+        clearInput()
     }
+
+    function clearInput() {
+        setNewToDo("")
+    }
+
     return (
         <div>
             <form>
@@ -24,6 +32,7 @@ function AddToDo( { addToDoItem } ) {
                 />
                 <button onClick={(event) => handleSubmit(event)}>ADD</button>
             </form>
+            <ToDoList toDos={toDos}/>
         </div>
     )
 }
